@@ -23,4 +23,5 @@ if __name__ == '__main__':
     import tracemalloc
     tracemalloc.start()
     rows = read_rides_as_tuples('Data/ctabus.csv')
+    print(rows[:10])
     print('Memory Use: Current %d, Peak %d' % tracemalloc.get_traced_memory())

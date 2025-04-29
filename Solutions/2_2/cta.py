@@ -1,4 +1,6 @@
 # cta.py
+import time
+before = time.time()
 
 from collections import defaultdict, Counter
 import tracemalloc
@@ -6,7 +8,7 @@ import readrides
 
 tracemalloc.start()
 
-rows = readrides.read_rides_as_dicts('../../Data/ctabus.csv')
+rows = readrides.read_rides_as_dicts('Data/ctabus.csv')
 
 # --------------------------------------------------
 # Question 1:  How many bus routes are in Chicago?
@@ -52,4 +54,5 @@ for route, diff in diffs.most_common(5):
     print(route, diff)
 
 # ---- Memory use
+print(time.time() - before)
 print('Memory Use: Current %d, Peak %d' % tracemalloc.get_traced_memory())

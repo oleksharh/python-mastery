@@ -34,6 +34,13 @@ import csv
 
 
 def read_rides(dat_type, data_path):
+    """
+    1: tuple \n
+    2: dict \n
+    3: plain class\n
+    4: named tuple\n
+    5: class with slots\n
+    """
     records = []
     with open(data_path) as f:
         rows = csv.reader(f)
